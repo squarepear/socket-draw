@@ -19,10 +19,22 @@ var lineColor = {
   b: 0
 }
 
-if (window.localStorage.getItem('color')) {
-  lineColor = window.localStorage.getItem('color')
+if (window.localStorage.getItem('color.r')) {
+  lineColor.r = window.localStorage.getItem('color.r')
 } else {
-  window.localStorage.setItem('color', lineColor)
+  window.localStorage.setItem('color.r', lineColor.r)
+}
+
+if (window.localStorage.getItem('color.g')) {
+  lineColor.g = window.localStorage.getItem('color.g')
+} else {
+  window.localStorage.setItem('color.g', lineColor.g)
+}
+
+if (window.localStorage.getItem('color.b')) {
+  lineColor.b = window.localStorage.getItem('color.b')
+} else {
+  window.localStorage.setItem('color.b', lineColor.b)
 }
 
 var Art = []
@@ -116,7 +128,9 @@ function changeColor(r, g, b) {
   lineColor.r = r
   lineColor.g = g
   lineColor.b = b
-  window.localStorage.setItem('color', lineColor)
+  window.localStorage.setItem('color.r', lineColor.r)
+  window.localStorage.setItem('color.g', lineColor.g)
+  window.localStorage.setItem('color.b', lineColor.b)
 }
 
 function guid() {
