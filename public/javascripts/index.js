@@ -19,6 +19,12 @@ var lineColor = {
   b: 0
 }
 
+if (window.localStorage.getItem('color')) {
+  lineColor = window.localStorage.getItem('color')
+} else {
+  window.localStorage.setItem('color', lineColor)
+}
+
 var Art = []
 
 function setup() {
@@ -110,6 +116,7 @@ function changeColor(r, g, b) {
   lineColor.r = r
   lineColor.g = g
   lineColor.b = b
+  window.localStorage.setItem('color', lineColor)
 }
 
 function guid() {
