@@ -1,3 +1,5 @@
+const {PORT = 3000} = process.env
+
 var express = require('express')
 var app = express()
 var http = require('http').Server(app)
@@ -43,6 +45,6 @@ io.on('connection', function (socket) {
   })
 })
 
-http.listen(process.env.port || 80, function () {
-  console.log(`listening on *:${process.env.port || 80}`)
+http.listen(PORT, function () {
+  console.log(`listening on *:${PORT}`)
 })
