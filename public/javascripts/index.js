@@ -61,7 +61,11 @@ function draw() {
         x: mouseX - (windowWidth/2),
         y: mouseY - (windowHeight/2)
       },
-      color: lineColor,
+      color: {
+        r: lineColor.r,
+        g: lineColor.g,
+        b: lineColor.b,
+      },
       userID: id
     }
 
