@@ -1,9 +1,9 @@
 var id = 0
-if (window.localStorage.getItem('id')) {
-  id = window.localStorage.getItem('id')
+if (localStorage.getItem('id')) {
+  id = localStorage.getItem('id')
 } else {
   id = guid()
-  window.localStorage.setItem('id', id)
+  localStorage.setItem('id', id)
 }
 
 var socket = io()
@@ -19,22 +19,22 @@ var lineColor = {
   b: 0
 }
 
-if (window.localStorage.getItem('color.r')) {
-  lineColor.r = window.localStorage.getItem('color.r')
+if (localStorage.getItem('color.r')) {
+  lineColor.r = localStorage.getItem('color.r')
 } else {
-  window.localStorage.setItem('color.r', lineColor.r)
+  localStorage.setItem('color.r', lineColor.r)
 }
 
-if (window.localStorage.getItem('color.g')) {
-  lineColor.g = window.localStorage.getItem('color.g')
+if (localStorage.getItem('color.g')) {
+  lineColor.g = localStorage.getItem('color.g')
 } else {
-  window.localStorage.setItem('color.g', lineColor.g)
+  localStorage.setItem('color.g', lineColor.g)
 }
 
-if (window.localStorage.getItem('color.b')) {
-  lineColor.b = window.localStorage.getItem('color.b')
+if (localStorage.getItem('color.b')) {
+  lineColor.b = localStorage.getItem('color.b')
 } else {
-  window.localStorage.setItem('color.b', lineColor.b)
+  localStorage.setItem('color.b', lineColor.b)
 }
 
 var Art = []
@@ -132,9 +132,9 @@ function changeColor(r, g, b) {
   lineColor.r = r
   lineColor.g = g
   lineColor.b = b
-  window.localStorage.setItem('color.r', lineColor.r)
-  window.localStorage.setItem('color.g', lineColor.g)
-  window.localStorage.setItem('color.b', lineColor.b)
+  localStorage.setItem('color.r', lineColor.r)
+  localStorage.setItem('color.g', lineColor.g)
+  localStorage.setItem('color.b', lineColor.b)
 }
 
 function guid() {
