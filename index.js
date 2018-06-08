@@ -28,6 +28,27 @@ io.on('connection', function (socket) {
   })
 
   socket.on('requestArt', (art) => {
+    let tArt = Art
+
+    art.forEach((line) => {
+      let duplicate = false
+      line.userID = 0
+
+      Art.forEach((tline) => {
+        tline.userID = 0
+
+        if (line === tline) {
+          duplicate = true
+        }
+      })
+
+      if (!duplicate) {
+        tArt.push(line)
+      }
+    })
+
+    Art = tArt
+
     socket.emit('art', Art)
   })
 
