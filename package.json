@@ -1,8 +1,12 @@
 {
-  "name": "DrawAndChat",
+  "name": "drawandchat",
   "description": "Draw and Chat",
   "version": "1.0.0",
   "author": "SquarePear",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node index.js"
+  },
   "dependencies": {
     "express": "^4.16.3",
     "pug": "^2.0.3",
