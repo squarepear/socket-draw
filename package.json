@@ -1,18 +1,24 @@
 {
-  "name": "drawandchat",
+  "name": "DrawAndChat",
+  "description": "Draw and Chat",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
   "author": "SquarePear",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
+    "pug": "^2.0.3",
     "socket.io": "^2.1.1"
   },
+  "bugs": {
+    "web": "https://github.com/rey2952/draw-and-chat/issues"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/rey2952/draw-and-chat.git"
+    }
+  ],
+  "license": "ISC",
+  "homepage": "https://draw-and-chat.herokuapp.com",
   "standard": {
     "ignore": [
       "/public/javascripts/*.js"

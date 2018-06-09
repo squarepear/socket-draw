@@ -10,9 +10,11 @@ var playerCount = 0
 var Art = []
 
 app.use(express.static('public'))
+app.set('views', './views')
+app.set('view engine', 'pug')
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '/views/index.html'))
+  res.sendFile(path.join(__dirname, 'index'))
 })
 
 io.on('connection', function (socket) {
