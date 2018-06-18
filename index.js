@@ -1,10 +1,8 @@
 const {PORT = 3000} = process.env
-
-var express = require('express')
-var app = express()
-var http = require('http').Server(app)
-var io = require('socket.io')(http)
-var path = require('path')
+const express = require('express')
+const app = express()
+const http = require('http').Server(app)
+const io = require('socket.io')(http)
 
 var playerCount = 0
 var Art = []
@@ -14,7 +12,7 @@ app.set('views', './views')
 app.set('view engine', 'pug')
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'index'))
+  res.render('index')
 })
 
 io.on('connection', function (socket) {
